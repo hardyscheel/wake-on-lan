@@ -8,19 +8,19 @@ import psutil  # For retrieving network interfaces
 # File to store MAC addresses
 DATA_FILE = "./settings/mac_addresses.json"
 
-# Function to load MAC addresses from the file
+# Load MAC addresses from file
 def load_data():
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, "r") as file:
             return json.load(file)
     return []
 
-# Function to save MAC addresses to the file
+# Save MAC addresses to file
 def save_data(data):
     with open(DATA_FILE, "w") as file:
         json.dump(data, file, indent=4)
 
-# Function to add a new entry
+# Add a new entry
 def add_entry():
     name = name_entry.get()
     mac = mac_entry.get()
@@ -33,7 +33,7 @@ def add_entry():
     name_entry.delete(0, tk.END)
     mac_entry.delete(0, tk.END)
 
-# Function to edit an entry
+# Edit an entry
 def edit_entry():
     selected_item = mac_table.selection()
     if not selected_item:
@@ -48,7 +48,7 @@ def edit_entry():
         save_data(data)
         update_table()
 
-# Function to delete an entry
+# Delete an entry
 def delete_entry():
     selected_item = mac_table.selection()
     if not selected_item:
@@ -59,7 +59,7 @@ def delete_entry():
     save_data(data)
     update_table()
 
-# Function to wake an entry
+# Wake an entry
 def wake_entry():
     selected_mac = mac_table.selection()
     if not selected_mac:
@@ -81,23 +81,23 @@ def wake_entry():
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {e}")
 
-# Function to update the MAC table
+# Update the MAC table
 def update_table():
     for row in mac_table.get_children():
         mac_table.delete(row)
     for i, entry in enumerate(data):
         mac_table.insert("", "end", values=(i, entry["name"], entry["mac"]))
 
-# Function to retrieve network interfaces
+# Retrieve network interfaces
 def get_network_interfaces():
     interfaces = []
     for interface, addrs in psutil.net_if_addrs().items():
         for addr in addrs:
-            if addr.family == 2:  # AF_INET corresponds to the numeric value 2 (IPv4)
+            if addr.family == 2:  # psutil.AF_INET corresponds to the numeric value 2 (IPv4) because of changes in the new version of psutil
                 interfaces.append((interface, addr.address))
     return interfaces
 
-# Function to update the interface table
+# Update the interface table
 def update_interface_table():
     for row in interface_table.get_children():
         interface_table.delete(row)
