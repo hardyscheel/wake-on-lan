@@ -1,0 +1,26 @@
+[
+    {
+        "name": "promo1 Point Upper",
+        "mac": "FC.3F.DB.0B.5C.BB"
+    },
+    {
+        "name": "promo1 Point Lower",
+        "mac": "fc.3f.db.0b.5c.bb"
+    },
+    {
+        "name": "promo1 Minus Upper",
+        "mac": "FC-3F-DB-0B-5C-BB"
+    },
+    {
+        "name": "promo1 Minus Lower",
+        "mac": "fc-3f-db-0b-5c-bb"
+    },
+    {
+        "name": "promo1 Upper",
+        "mac": "FC3FDB0B5CBB"
+    },
+    {
+        "name": "promo1 Lower",
+        "mac": "fc3fdb0b5cbb"
+    }
+]

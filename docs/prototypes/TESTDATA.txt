@@ -1,0 +1,13 @@
+FC:3F:DB:0B:5C:BB
+fc:3f:db:0b:5c:bb
+
+FC.3F.DB.0B.5C.BB
+fc.3f.db.0b.5c.bb
+
+FC-3F-DB-0B-5C-BB
+fc-3f-db-0b-5c-bb
+
+FC3FDB0B5CBB
+fc3fdb0b5cbb
+
+192.168.200.35
