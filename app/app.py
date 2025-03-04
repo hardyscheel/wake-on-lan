@@ -6,7 +6,7 @@ import os
 import psutil  # For retrieving network interfaces
 
 # File to store MAC addresses
-DATA_FILE = "./settings/mac_addresses.json"
+DATA_FILE = "./config/mac_addresses.json"
 
 # Load MAC addresses from file
 def load_data():
