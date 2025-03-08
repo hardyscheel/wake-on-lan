@@ -1,26 +1,26 @@
-# WakeOnLAN
+# wol - WakeOnLAN
 Wake up network devices in your LAN with Wake-on-LAN.
 
 [README-images-01]: /docs/img/screenshot_main_window.png "Screenshot of the main window"
 ![README-images-01][README-images-01]
 
 ## Description
-The Wake-on-LAN app is broadcasting Wake-on-LAN frames to wake up sleeping devices. Standard broadcast ip is 255.255.255.255 on port 9. You can manage manage and store several mac addresses. Your computers network interfaces can be listed from where you can choose the right one you want to send Wake-on-LAN frames from.
-The app uses the wakeonlan Python module, a tkinter GUI and the psutil module to choose a network interface on your computer.
+This Wake-on-LAN app is broadcasting Wake-on-LAN frames to wake up sleeping devices. Standard broadcast ip is 255.255.255.255 on Standard port 9. The broadcast ip and port can be changed. You can manage manage and store several mac addresses. Your computers network interfaces can be listed from where you can choose the right one you want to send Wake-on-LAN frames from.
 
 ## Requirements to run the app
-    pip install wakeonlan
     pip install psutil
 
 ## How to use the app
 1. Add one or more destination MAC-addresses of your devices you want to wake up. You can also add names for them and edit or delete them later.
 2. Select a MAC-address/device from the table.
 3. (Optional) Select a network interface of your computer. Your sleeping device must be in the same network as your network interface.
+4. (Optional) Change the broadcast ip address and the port. Standard broadcast ip is 255.255.255.255 on Standard port is 9.
 
 The format of the MAC-addresses you can use must be in one of the following format:
 - ff.ff.ff.ff.ff.ff
 - 00-00-00-00-00-00
 - FFFFFFFFFFFF
+- ff:ff:ff:ff:ff:ff
 
 ## Troubleshooting
 **I need more information about my network interface!**  
