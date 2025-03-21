@@ -1,7 +1,7 @@
-# wol - wake on lan module
+# wake-on-lan
 A Wake-on-LAN Python module to use the Wake-on-LAN protocol to wake up sleeping network devices in your LAN.
 
-**wol** can be used as:
+**wake-on-lan** can be used as:
 - an importable module
 - can be called directly via console
 - can be used as a standalone script

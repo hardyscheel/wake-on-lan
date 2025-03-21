@@ -1,6 +1,13 @@
-# wol - WakeOnLAN
+# wol - wake-on-lan
 
 Nutzung als importierbares Modul, über die Konsole oder eigentständiges Skript möglich. Die Funktionen `send_magic_packet` und `wake_up` können in anderen Skripten importiert oder direkt über die Konsole aufgerufen werden.
+
+#### ***Magic Packet Structure***
+| Part             | Size (Bytes) | Content                                  |
+|------------------|--------------|------------------------------------------|
+| Header           | 6            | `0xFF 0xFF 0xFF 0xFF 0xFF 0xFF`         |
+| MAC Address (x16)| 96           | 16 repetitions of the MAC address        |
+| **Total**        | **102**      |                                          |
 
 ---
 

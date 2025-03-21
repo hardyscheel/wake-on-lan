@@ -1,6 +1,13 @@
-# wol - WakeOnLAN
+# wol - wake-on-lan
 
 Can be used as an importable module, via the console or as a standalone script. The functions `send_magic_packet` and `wake_up` can be imported into other scripts or called directly via the console.
+
+#### ***Magic Packet Structure***
+| Part             | Size (Bytes) | Content                                  |
+|------------------|--------------|------------------------------------------|
+| Header           | 6            | `0xFF 0xFF 0xFF 0xFF 0xFF 0xFF`         |
+| MAC Address (x16)| 96           | 16 repetitions of the MAC address        |
+| **Total**        | **102**      |                                          |
 
 ---
 
@@ -19,6 +26,7 @@ Can be used as an importable module, via the console or as a standalone script. 
      from wol import wake_up
      wake_up("00:11:22:33:44:55", broadcast_ip="192.168.1.255")
      ```
+
 
 ---
 
