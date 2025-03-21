@@ -1,5 +1,5 @@
 # wake-on-lan
-A Wake-on-LAN Python module to use the Wake-on-LAN protocol to wake up sleeping network devices in your LAN.
+A Wake-on-LAN Python module and GUI to use the Wake-on-LAN protocol to wake up sleeping network devices in your LAN.
 
 **wake-on-lan** can be used as:
 - an importable module
